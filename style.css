@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 98%);
+    --bg-try-free: hsl(248, 32%, 49%);
+    --border-input-color: rgba(0, 0, 0, 0.105);
+    --border-outline-color: hsl(246deg 9.38% 24.91%);
+    --bg-button: hsl(154deg 55.93% 28.78%);
+    --attention: hsl(0deg 100% 34.72%);
+    --attention-border-input: rgba(255, 0, 0, 0.337);
+    --button-hover: rgb(90, 226, 250);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(./images/bg-intro-desktop.png);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: transitionIn 0.5s;
+}
+
+.intro-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: clamp(1rem, 0.227rem + 12.364vw, 3.125rem);
+}
+
+.intro-info>h1 {
+    font-size: clamp(0.5rem, -0.045rem + 8.727vw, 2rem);
+}
+
+.intro-info>p {
+    font-size: clamp(0.3rem, 0.045rem + 4.073vw, 1rem);
+}
+
+.info-details {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.try-free {
+    width: 100%;
+    color: var(--white);
+    background-color: var(--bg-try-free);
+    text-align: center;
+    border-radius: clamp(0.2rem, 0.045rem + 2.473vw, 0.625rem);
+    box-shadow: 0em 0.4em rgba(40, 10, 10, 0.237);
+    font-size: clamp(0.2rem, -0.055rem + 4.073vw, 0.9rem);
+}
+
+.form-info {
+    width: 100%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(0.4rem, 0rem + 6.4vw, 1.5rem) 0;
+    gap: clamp(0.2rem, 0.045rem + 2.473vw, 0.625rem);
+    border-radius: clamp(0.2rem, 0.045rem + 2.473vw, 0.625rem);
+    box-shadow: 0em 0.4em rgba(40, 10, 10, 0.237);
+}
+
+.input-info {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    outline-color: var(--border-outline-color);
+    font-size: clamp(0.2rem, -0.055rem + 4.073vw, 0.9rem);
+    font-weight: 600;
+    padding: clamp(0.4rem, 0.109rem + 4.655vw, 1.2rem) 0 clamp(0.4rem, 0.109rem + 4.655vw, 1.2rem) clamp(0.4rem, 0.036rem + 5.818vw, 1.4rem);
+    border-color: var(--border-input-color);
+    border-radius: clamp(0.2rem, 0.045rem + 2.473vw, 0.625rem);
+}
+
+.error-icon {
+    position: absolute;
+    top: clamp(-0.22rem, -0.83rem + 9.76vw, 1rem);
+    right: clamp(0.6rem, 0.164rem + 6.982vw, 1.8rem);
+    width: clamp(0.4rem, 0rem + 6.4vw, 1.5rem);
+    visibility: hidden;
+
+}
+
+.error-icon>img {
+    width: 100%;
+}
+
+.error-icon-show {
+    visibility: visible;
+    animation: transitionIn 0.5s;
+}
+
+.label-info {
+    font-size: clamp(0.2rem, 0.018rem + 2.909vw, 0.7rem);
+    color: var(--attention);
+    font-style: oblique;
+    visibility: hidden;
+}
+
+.label-info-show {
+    visibility: visible;
+    animation: transitionIn 0.5s;
+}
+
+.input-border {
+    border-color: var(--attention-border-input);
+    animation: transitionIn 0.5s;
+}
+
+button {
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--bg-button);
+    border: 0;
+    padding: clamp(0.4rem, 0.091rem + 4.945vw, 1.25rem);
+    width: 90%;
+    font-size: clamp(0.2rem, -0.055rem + 4.073vw, 0.9rem);
+    font-weight: 600;
+    border-radius: clamp(0.2rem, 0.045rem + 2.473vw, 0.625rem);
+    transition: color 1s;
+}
+
+button:hover {
+    cursor: pointer;
+    color: var(--button-hover);
+}
+
+
+small {
+    color: var(--border-outline-color);
+    text-align: center;
+    font-size: clamp(0.2rem, -0.018rem + 3.491vw, 0.8rem);
+}
+
+span {
+    color: var(--attention);
+    font-weight: 600;
+}
+
+@media(min-width:376px) {
+
+    body {
+        min-height: 100vh;
+    }
+
+    .container {
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .intro-info {
+        width: 50%;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .intro-info>h1 {
+        font-size: clamp(1rem, -0.435rem + 6.107vw, 3rem);
+    }
+
+    .intro-info>p {
+        font-size: clamp(0.4rem, -0.132rem + 2.264vw, 1rem);
+        padding-right: clamp(0.5rem, -0.428rem + 3.947vw, 3.125rem);
+    }
+
+    .info-details {
+        width: 50%;
+        gap: clamp(0.5rem, -0.443rem + 4.011vw, 1.563rem);
+    }
+
+    .try-free {
+        border-radius: clamp(0.2rem, -0.177rem + 1.604vw, 0.625rem);
+        box-shadow: 0em 0.4em rgba(40, 10, 10, 0.237);
+        font-size: clamp(0.3rem, -0.273rem + 2.44vw, 1rem);
+    }
+
+    .form-info {
+        padding: clamp(0.7rem, -0.342rem + 4.434vw, 1.875rem) 0;
+        gap: clamp(0.3rem, 0.012rem + 1.226vw, 0.625rem);
+        border-radius: clamp(0.2rem, -0.177rem + 1.604vw, 0.625rem);
+        box-shadow: 0em 0.4em rgba(40, 10, 10, 0.237);
+    }
+
+    input {
+        font-size: clamp(0.3rem, -0.232rem + 2.264vw, 0.9rem);
+        padding: clamp(0.4rem, -0.188rem + 2.502vw, 1.063rem) 0 clamp(0.4rem, -0.188rem + 2.502vw, 1.063rem) clamp(0.5rem, -0.276rem + 3.302vw, 1.375rem);
+        border-radius: clamp(0.2rem, -0.177rem + 1.604vw, 0.625rem);
+    }
+
+    /*errors icons and labels*/
+
+    .error-icon {
+        top: clamp(-0.15rem, -1.413rem + 5.373vw, 0.938rem);
+        right: clamp(0.5rem, -0.165rem + 2.83vw, 1.25rem);
+        width: clamp(0.5rem, -0.387rem + 3.774vw, 1.5rem);
+    }
+
+
+    .label-info {
+        font-size: clamp(0.3rem, -0.143rem + 1.887vw, 0.8rem);
+        color: var(--attention);
+    }
+
+    /*errors icons and labels*/
+
+    button {
+        padding: clamp(0.5rem, -0.165rem + 2.83vw, 1.25rem);
+        font-size: clamp(0.3rem, -0.396rem + 2.963vw, 0.9rem);
+        border-radius: clamp(0.2rem, -0.177rem + 1.604vw, 0.625rem);
+    }
+
+
+    small {
+        font-size: clamp(0.2rem, -0.074rem + 1.165vw, 0.8rem);
+        margin-bottom: clamp(0.5rem, -0.165rem + 2.83vw, 1.25rem);
+    }
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-5deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
